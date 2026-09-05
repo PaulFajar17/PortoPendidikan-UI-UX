@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
-  /* config options here */
+  output: 'export',
+  basePath: isProd ? '/PortoPendidikan-UI-UX' : '',
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
